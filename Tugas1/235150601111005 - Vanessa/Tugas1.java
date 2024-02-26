@@ -1,4 +1,4 @@
-package Tugas1; 
+package Tugas1;
 import java.util.Scanner;
 
 public class Tugas1 {
@@ -17,9 +17,9 @@ public class Tugas1 {
         int pilihan;
         do {
             System.out.println("\nMenu:");
-            System.out.println("1. Pendaftaran Mata Kuliah");
-            System.out.println("2. Cek Jadwal Mata Kuliah");
-            System.out.println("3. Pengelolaan Nilai");
+            System.out.println("1. Kartu Rencana Studi");
+            System.out.println("2. Jadwal Mata Kuliah");
+            System.out.println("3. Kartu Hasil Studi");
             System.out.println("4. Keluar");
 
             System.out.print("Pilih menu (1-4): ");
@@ -39,13 +39,13 @@ public class Tugas1 {
                     System.out.println("Terima kasih telah menggunakan Sistem Informasi Akademik Mahasiswa");
                     break;
                 default:
-                    System.out.println("Pilihan tidak valid. Silakan pilih lagi.");
+                    System.out.println("Pilihan tidak valid. Silahkan pilih lagi.");
             }
         } while (pilihan != 4);
     }
 
     static void pendaftaranMataKuliah() {
-        System.out.println("\nPendaftaran Mata Kuliah");
+        System.out.println("\nKartu Rencana Studi");
         for (int i = 0; i < mataKuliah.length; i++) {
             System.out.println((i + 1) + ". " + mataKuliah[i]);
         }
@@ -71,7 +71,7 @@ public class Tugas1 {
     }
 
     static void pengelolaanNilai() {
-        System.out.println("\nPengelolaan Nilai");
+        System.out.println("\nKartu Hasil Studi");
 
         for (int i = 0; i < mataKuliah.length; i++) {
             System.out.print("Masukkan nilai untuk mata kuliah " + mataKuliah[i] + ": ");
