@@ -1,0 +1,6 @@
+Clean code: A Handbook of Agile Software Craftsmanship,Robert C. Martin,Prentice Hall
+Buku Pengantar Teknologi Informasi - Teknik Informatika,Buhori Muslim,Buku Pendidikan Deepublish
+Computer Architecture: A Quantitative Approach,David A. Patterson dan John L.,Philadelphia
+Design Patterns: Elements of Reusable Object-Oriented Software,Erich Gamma Richard Helm Ralph Johnson dan John Vlissides, Addison Wesley
+The Pragmatic Programmer: Your Journey to Mastery,Andrew Hunt dan David Thomas,Addison Wesley
+The Hidden Language of Computer Hardware and Software,Charles Petzold,Microsoft Press
