@@ -1,0 +1,140 @@
+Data dan Analisis hasil percobaan 
+ 
+A. Overloading Method  
+Pertanyaan  
+
+1. Lakukan percobaan diatas dan benahi jika menemukan kesalahan!  
+import java.util.Scanner;
+Sudah dan tidak ada kesalahan
+
+public class Overloading {     
+ public static void HitungLuas(int a,int b){    
+ int nilai = a*b;     
+ System.out.println("maka hasil luas : "+nilai);   
+ }      
+ public static double HitungLuas(double value, double value2){  
+ double nilai = value* value2;     
+ return nilai;     
+ }      
+ public static void main(String[] args) {    
+ Scanner in = new Scanner(System.in);    
+ System.out.print("masukkan nilai integer 1 : ");   
+ int integer1 = in.nextInt();     
+ System.out.print("masukkan nilai integer 2 : ");   
+ int integer2 = in.nextInt();     
+ HitungLuas(integer1, integer2);     
+ System.out.print("masukkan nilai double 1 : ");   
+ double double1 = in.nextDouble();    
+ System.out.print("masukkan nilai double 2 : ");   
+ double double2 = in.nextDouble();    
+ HitungLuas(integer1, integer2);     
+ System.out.println("Maka hasil luas :  
+ "+HitungLuas(double1, double2));    
+ }      
+ }  
+ 
+2. Jika pada baris 7, pada parameter double value dan double value2 di hapus dan di ganti 
+menjadi int a dan int b apa yang terjadi? Jelaskan!  
+    public static double HitungLuas(double value, double value2){  
+    double nilai = value* value2;     
+    return nilai;     
+    }   
+
+    public static double HitungLuas(double int a, double int b){ 
+    double nilai = value* value2;     
+    return nilai;     
+    }  
+    yang terjadi ketika parameter double value dan double value2 di hapus dan di ganti menjadi int a dan int b,
+    maka akan error karena method hitungLuas menerima parameter double
+
+
+3. Rubah method pada baris ketujuh menjadi method bertipe void, dan lakukan juga 
+perubahan main method.  
+    public static double HitungLuas(double value, double value2){  
+    double nilai = value* value2;     
+    return nilai;     
+    }
+    
+    Setelah dirubah menjadi method bertipe void
+    public static void HitungLuas(double value, double value2) {
+    double nilai = value * value2;
+    System.out.println("maka hasil luas : " + nilai);
+    }
+
+
+B. Overloading Constructor  
+Pertanyaan  
+
+1. Lakukan percobaan diatas dan benahi jika menemukan kesalahan! 
+Sudah dan tidak ada kesalahan
+
+public class lingkaran{ 
+int alas, tinggi;  3 public lingkaran(int alas){  
+this.alas = alas;  
+}  
+public lingkaran(int alas, int tinggi){  
+this.alas = alas; 
+this.tinggi = tinggi;  
+}  
+public void setAlas(int alas){  
+this.alas = alas;  
+}  
+public void setTinggi(int tinggi){  
+this.tinggi = tinggi;  
+}  
+public int getAlas(){  
+return alas;  
+}  
+public int getTinggi(){  
+return tinggi;  
+}  
+public double hitungLuas(){  
+double hasil = (double)(getTinggi()*getAlas())/2; 
+return hasil; 
+}
+public void displayMessage(){ 
+System.out.println("Hitung Luas : "+hitungLuas());  
+}  
+} 
+
+public class LIngkaranMain{  
+public static void main(String[] args){  
+lingkaran l = new lingkaran(3); 
+l.setTinggi(10); 
+l.displayMessage(); 
+lingkaran l2 = new lingkaran(4, 10); 
+l2.displayMessage();  
+}   
+}
+
+
+
+2. Pada class lingkaran Tambahkan constructor dengan parameter int tinggi, apa yang terjadi 
+dan jelaskan!  
+
+public lingkaran(int tinggi){
+    this.tinggi = tinggi;
+    }
+    
+    terjadi error karena jumlah dan tipe parameternya sama
+
+3. Pada class lingkaran tambahkan constrctor dengan tipe data String alas dan String tinggi, 
+kemudian tambahkan method untuk melakukan parsing atau perubahan tipe data dari 
+String menjadi integer. Setelah itu pada method main lakukan instansiasi objek dengan 
+nama objek Lstring dengan memanggil constructor bertipe data String. Jelaskan!
+
+public lingkaran(String stringAlas, String stringTinggi){
+    this.alas = Integer.parseInt(stringAlas);
+    this.tinggi = Integer.parseInt(stringTinggi);
+    }
+
+konstruktor menerima dua parameter bertipe data String, konstruktor melakukan konversi tipe data String untuk menginisialisasi nilai alas dan tinggi
+
+public class LIngkaranMain {
+    public static void main(String[] args) {
+    lingkaran Lstring = new lingkaran("5", "10");
+    Lstring.displayMessage();
+    }
+}
+
+
