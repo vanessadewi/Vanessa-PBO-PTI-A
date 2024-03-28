@@ -1,1 +1,115 @@
+Data dan Analisis hasil percobaan 
 
+A. Encapsulation 1 
+
+Pertanyaan 
+
+1. Lakukan percobaan diatas dan benahi jika menemukan kesalahan! 
+
+Sudah, pada class Student tidak ditemukan kesalahan
+
+Pada class Test
+s1.setMark("90"); dirubah menjadi s1.setMark(90); 
+Dengan menghilangkan tanda "" untuk menggunakan nilai int bukan string.
+
+System.out.println("s1Name is "+s1.setName()); dirubah menjadi System.out.println("s1Name is "+s1.getName()); 
+Untuk merubah metod mutator menjadi method aksesor
+
+System.out.println("s1Mark is "+s1.setMark()); dirubah menjadi System.out.println("s1Mark is "+s1.getMark()); 
+Untuk merubah metod mutator menjadi method aksesor
+
+System.out.println("name dan mark "+name+" "+mark); dirubah menjadi System.out.println("name dan mark "+s1.getName()+" "+s1.getMark());
+Untuk mencetak nilai atribut yang sudah dirubah methodnya
+
+
+2. Jika pada baris 6 s1.setName diubah menjadi s1.getName apa yang terjadi? jelaskan! 
+
+Sebelum dirubah tadi error, setelah dirubah tidak error lagi tetapi tidak ada output yang dihasilkan atau nilai yang disimpan. Karena hasil dari pemanggilan method getName() tidak disimpan dalam variabel atau digunakan dalam operasi selanjutnya, tidak akan ada output yang dihasilkan dari perintah ini
+ 
+3. Setelah diperbaiki, ubahlah hak akses pada baris 4 (pada class Student)  menjadi private apa yang terjadi jika class Test dijalankan? Jelaskan! 
+
+Jika hak akses dirubah pada class Student menjadi private, maka hanya class Student yang dapat mengaksesnya dan class Test tidak bisa.
+ 
+4. Jika kedua kelas diatas terdapat dalam package yang sama apakah konsep enkapsulasi tetap berfungsi? jelaskan! 
+
+Tetap berfungsi, meskipun kedua kelas Student dan Test berada dalam paket yang sama. Enkapsulasi adalah konsep yang memungkinkan pembungkusan data bersama dengan metode yang beroperasi pada data tersebut dalam satu unit tunggal, atau dalam hal ini, dalam satu kelas. Itu berarti bahwa walaupun kelas Test berada dalam paket yang sama dengan kelas Student, kelas Test tidak akan secara langsung dapat mengakses atau mengubah atribut name dan mark dari kelas Student tanpa menggunakan metode aksesor (getter) dan mutator (setter) yang telah diberikan
+ 
+B. Encapsulation 2 
+
+Pertanyaan 
+
+1. Method apakah yang menjadi accessor (getter) ? 
+
+public double getLoad(){ 
+return this.load;
+}
+Merupakan method accessor untuk atribut load
+
+public double getMaxLoad(){ 
+return this.maxLoad;
+}
+Merupakan method accessor untuk atribut maxLoad
+
+2. Tambahkan source code berikut dibawah baris ke 6 pada class TestVehicle1. 
+System.out.println("Add load(100kg) : " + (vehicle.load=500)); 
+Jalankan program, apakah output dari program tersebut?  
+Kembalikan program seperti semula. 
+
+Kode program akan error karena atribut load bersifat private, sehingga tidak dapat diakses langsung dari luar kelas tersebut
+
+3. Ubahlah tipe data pada atribut load dan maxload pada class Vehicle1 menjadi public.  
+Jalankan program, apakah output dari program tersebut? 
+
+public double load, maxLoad;
+
+Output dari program tersebut adalah
+Creating a vehicle with a 10,000 kg maximumload.
+Add box #1 (500kg) : true
+Add box #2 (250kg) : true
+Add box #3 (5000kg) : true
+Add box #4 (4000kg) : true
+Add box #5 (300kg) : false
+Vehicle load is 9750.0kg
+
+a. Tambahkan source kode berikut dibawah baris ke 6 pada class TestVehicle1. 
+System.out.println("Add load(100kg) : " + (vehicle.load=500)); 
+Jalankan program, apakah output dari program tersebut?  
+Kembalikan program seperti semula. 
+
+Output dari program tersebut adalah
+Creating a vehicle with a 10,000 kg maximumload.
+Add box #1 (500kg) : true
+Add load(100kg) : 500.0
+Add box #2 (250kg) : true
+Add box #3 (5000kg) : true
+Add box #4 (4000kg) : true
+Add box #5 (300kg) : false
+Vehicle load is 9750.0kg
+
+b. Tambahkan source kode berikut dibawah baris ke 12 pada class TestVehicle1. 
+System.out.println("Add load(100kg) : " + (vehicle.load=500)); 
+Jalankan program, apakah output dari program tersebut?  
+Kembalikan program seperti semula. 
+
+Output dari program tersebut adalah
+Creating a vehicle with a 10,000 kg maximumload.
+Add box #1 (500kg) : true
+Add load(100kg) : 500.0
+Add box #2 (250kg) : true
+Add box #3 (5000kg) : true
+Add box #4 (4000kg) : true
+Add load(100kg) : 500.0
+Add box #5 (300kg) : true
+Vehicle load is 800.0kg
+
+4. Ulangi instruksi pada nomer 4 dengan mengubah tipe data pada atribut load dan maxload 
+pada class Vehicle1 menjadi protected. 
+
+protected double load, maxLoad;
+Maka atribut load dan maxLoad masih bisa diakses dari kelas TestVehicle1, tetapi tidak dapat diakses dari kelas-kelas di luar paket tersebut.
+
+5. Ulangi instruksi pada nomer 4 dengan mengubah tipe data pada atribut load dan maxload 
+pada class Vehicle1 menjadi default. 
+
+double load, maxLoad;
+Maka atribut load dan maxLoad tidak dapat diakses dari kelas TestVehicle1.
