@@ -5,9 +5,9 @@
 //     Employee employee = new Employee();
 //     }
 //    }
-//1. Kode yang diberikan akan menyebabkan kesalahan kompilasi karena Anda tidak dapat membuat objek dari 
+//1. Kode yang diberikan akan menyebabkan kesalahan kompilasi karena tidak dapat membuat objek dari 
 //kelas abstrak secara langsung. Kelas Employee adalah kelas abstrak, yang berarti tidak dapat diinisialisasi 
-//sendiri. Sebagai gantinya, Anda perlu membuat instansi dari subclass konkret dari Employee, seperti HourlyEmployee, 
+//sendiri. Sebagai gantinya, perlu membuat instansi dari subclass konkret dari Employee, seperti HourlyEmployee, 
 //SalariedEmployee, CommissionEmployee, atau BasePlusCommissionEmployee.   
 
 //2. Jalankan program dengan main sebagai berikut. 
